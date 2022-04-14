@@ -1,0 +1,8 @@
+.ui .label{
+   margin-bottom: 1rem;
+   background: lightblue;
+}
+
+.ui .input{
+    color:tomato;
+}
