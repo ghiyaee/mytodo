@@ -4,7 +4,7 @@ import './App.css'
 import UnSplash from "../api/UnSplash";
 import Image from "./Images";
 class App extends React.Component {
-    state={images:[]}
+    state = { images: [],}
    onSubmitHandel=async (trm) => {
       const respons = await UnSplash.get('/search/photos', {
           params: { query: trm },
@@ -14,11 +14,11 @@ class App extends React.Component {
       })
        this.setState({ images: respons.data.results })
        console.log(respons);
-  
     }
+   
     render() {
         return (
-            <div className="ui container">
+            <div className="ui container" >
                 <SearchBox onSubmite={this.onSubmitHandel} />
                 <Image image={this.state.images }/>
             </div>

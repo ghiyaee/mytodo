@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import '../components/SearchBox.css'
 class SearchBox extends React.Component{
-    state={trm:'',id:0}
+    state={trm:''}
        onSubmit=(e)=> {
         e.preventDefault() 
         ///here is used this. method assignment Arro function
-        this.props.onSubmite(this.state.trm)
+           this.props.onSubmite(this.state.trm)
     }
     render() {
         return (
@@ -20,8 +20,8 @@ class SearchBox extends React.Component{
                                 placeholder="Search for photos of anything you like"
                                 style={{ fontSize: '30px', textAlign: 'center' }}
                                 onChange={(e) => this.setState({ trm: e.target.value })} />
-                            </div>
-                      </div>
+                         </div>
+                    </div>
                     <h1>{this.state.trm}</h1>
                 </form>
             </div>
